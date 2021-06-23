@@ -53,19 +53,19 @@ const configuredDaysPattern = /^Days: ([0-9]+)$/;
                     // Remove the ' xx' from the item
                     sublistLabel = sublist.replace(xxDaysPattern, "$1");
                     let localDaysPrompt = Prompt.create();
-                    localDaysPrompt.addTextField("numberOfDays", "Number of days:", "");
+                    localDaysPrompt.addTextField("numberOfDays", "Number of days for " + sublistLabel + ":", "");
                     localDaysPrompt.addButton("Continue");
                     localDaysPrompt.show();
                     localDurationDays = localDaysPrompt.fieldValues.numberOfDays;
                 }
 
                 let itemsSelectPrompt = Prompt.create();
-                itemsSelectPrompt.addSelect('items', sublist, myList[sublist].items, myList[sublist].items, true);
+                itemsSelectPrompt.addSelect('items', sublistLabel, myList[sublist].items, myList[sublist].items, true);
                 itemsSelectPrompt.addButton('Add');
                 itemsSelectPrompt.show();
                 if (itemsSelectPrompt.buttonPressed == 'Add') {
                     // Add the section header
-                    draft.content = draft.content + "\n" + sublist + ' ' + myList[sublist].emoji;
+                    draft.content = draft.content + "\n" + sublistLabel + ' ' + myList[sublist].emoji;
                     itemsSelectPrompt.fieldValues.items.forEach(function (item) {
                         var numberIndicator = '';
                         if (xxDaysPattern.test(item)) {
