@@ -38,7 +38,7 @@ const configuredDaysPattern = /^Days: ([0-9]+)$/;
                 sublists.push(k);
             }
         }
-        
+
         let sublistPrompt = Prompt.create();
         sublistPrompt.addSelect('sublists', 'Include which sub-lists?', sublists, sublists, true);
         sublistPrompt.addButton('Add');
@@ -59,26 +59,22 @@ const configuredDaysPattern = /^Days: ([0-9]+)$/;
                     localDurationDays = localDaysPrompt.fieldValues.numberOfDays;
                 }
 
-                let itemsSelectPrompt = Prompt.create();
-                itemsSelectPrompt.addSelect('items', sublistLabel, myList[sublist].items, myList[sublist].items, true);
-                itemsSelectPrompt.addButton('Add');
-                itemsSelectPrompt.show();
-                if (itemsSelectPrompt.buttonPressed == 'Add') {
-                    // Add the section header
-                    draft.content = draft.content + "\n" + sublistLabel + ' ' + myList[sublist].emoji;
-                    itemsSelectPrompt.fieldValues.items.forEach(function (item) {
-                        var numberIndicator = '';
-                        if (xxDaysPattern.test(item)) {
-                            if (localDurationDays > 0) {
-                                numberIndicator = ' x' + localDurationDays;
-                            } else {
-                                numberIndicator = ' x' + durationDays;
-                            }
-                            item = item.replace(xxDaysPattern, "$1");
+                // Add the section header
+                draft.content = draft.content + "\n" + sublistLabel + ' ' + myList[sublist].emoji;
+
+                // Add the items in this sublist
+                myList[sublist].items.forEach(function (item) {
+                    var numberIndicator = '';
+                    if (xxDaysPattern.test(item)) {
+                        if (localDurationDays > 0) {
+                            numberIndicator = ' x' + localDurationDays;
+                        } else {
+                            numberIndicator = ' x' + durationDays;
                         }
-                        draft.content = draft.content + "\n" + '- [ ] ' + item + numberIndicator;
-                    });
-                }
+                        item = item.replace(xxDaysPattern, "$1");
+                    }
+                    draft.content = draft.content + "\n" + '- [ ] ' + item + numberIndicator;
+                });
             });
         }
 
