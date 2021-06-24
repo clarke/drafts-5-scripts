@@ -1,0 +1,117 @@
+{
+    "Toiletries": {
+        "emoji": "\ud83e\udea5",
+        "items": [
+            "Toothbrush",
+            "Toothpaste",
+            "Comb",
+            "Deodorant",
+            "Q tips",
+            "Shaver"
+        ]
+    },
+    "Technology": {
+        "emoji": "\ud83d\udcbb",
+        "items": [
+            "iPad",
+            "iPad charger",
+            "Apple pencil",
+            "iPhone",
+            "iPhone charger",
+            "Laptop",
+            "Laptop charger",
+            "Apple watch",
+            "Kindle",
+            "AirPods Pro"        
+        ]
+    },
+    "Dress Clothes": {
+        "emoji": "👔",
+        "items": [
+            "Dress shirt xx",
+            "Undershirt xx",
+            "Dress pants xx",
+            "Dress shoes",
+            "Dress belt",
+            "Dress socks xx",
+            "Dress watch",
+            "Tie"
+        ]
+    },
+    "Clothes": {
+        "emoji": "👕",
+        "items": [
+            "Shirts xx",
+            "Shorts xx",
+            "Socks xx",
+            "Underwear xx",
+            "Belt",
+            "Heavy jacket",
+            "Light jacket",
+            "Rain coat",
+            "Swim trunks"
+        ]
+    },
+    "Gym Clothes": {
+        "emoji": "🎽",
+        "items": [
+            "Gym shirts xx",
+            "Gym shorts xx",
+            "Gym shoes",
+            "Gym socks"
+        ]
+    },
+    "Air Travel xx": {
+        "emoji": "✈️",
+        "items": [
+            "Noise canceling headphones",
+            "Two prong airline headphone adapter",
+            "Neck pillow",
+            "Eye mask"
+        ]
+    },
+    "Hotel": {
+        "emoji": "🏨",
+        "items": [
+            "Slippers for hotel"
+        ]
+    },
+    "Essentials": {
+        "emoji": "😎",
+        "items": [
+            "Pens",
+            "Pencils",
+            "Notebook",
+            "Wallet",
+            "Ziploc bags",
+            "Sunglasses",
+            "Kleenex",
+            "Dirty laundry bag",
+            "Contact information for my destination",
+            "Ear plugs",
+            "Face masks",
+            "Baseball cap"
+        ]
+    },
+    "Health": {
+        "emoji": "💊",
+        "items": [
+            "Chapstick",
+            "Tylenol"
+        ]
+    },
+	"Entertainment": {
+	"emoji": "🍿",
+		"items": [
+			"Movies",
+			"Music"
+		]
+    },
+	"International": {
+	"emoji": "🗺️",
+		"items": [
+			"Passport",
+			"Local currency"
+		]
+    }
+}
